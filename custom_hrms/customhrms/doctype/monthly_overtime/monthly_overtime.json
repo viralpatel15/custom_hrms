@@ -1,0 +1,109 @@
+{
+ "actions": [],
+ "autoname": "format: {month}-{employee}",
+ "creation": "2024-06-12 21:41:09.507796",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "employee",
+  "employee_name",
+  "month",
+  "year",
+  "column_break_cgphh",
+  "overtime_days",
+  "lunch",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "month",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Month",
+   "options": "\nJAN\nFEB\nMARCH\nAPRIL\nMAY\nJUN\nJULY\nAUG\nSEP\nOCT\nNOV\nDEC",
+   "reqd": 1
+  },
+  {
+   "fieldname": "year",
+   "fieldtype": "Link",
+   "label": "Year",
+   "options": "Fiscal Year",
+   "reqd": 1
+  },
+  {
+   "fieldname": "employee",
+   "fieldtype": "Link",
+   "label": "Employee",
+   "options": "Employee",
+   "reqd": 1
+  },
+  {
+   "fetch_from": "employee.employee_name",
+   "fieldname": "employee_name",
+   "fieldtype": "Data",
+   "label": "Employee Name"
+  },
+  {
+   "fieldname": "column_break_cgphh",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "overtime_days",
+   "fieldtype": "Float",
+   "label": "Overtime Days"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Monthly Overtime",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
+  },
+  {
+   "fieldname": "lunch",
+   "fieldtype": "Int",
+   "label": "Lunch"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Monthly Overtime",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2024-06-12 22:17:39.779902",
+ "modified_by": "Administrator",
+ "module": "CustomHRMS",
+ "name": "Monthly Overtime",
+ "name_case": "UPPER CASE",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "print": 1,
+   "read": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}
